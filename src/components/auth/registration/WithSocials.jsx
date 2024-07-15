@@ -1,13 +1,15 @@
 import React from 'react'
 import Button from '../../UI/Button'
 import { GoogleLogo, FaceLogo } from '../../../../public/svg'
+import { useTranslation } from 'react-i18next'
 
 const WithSocials = () => {
+    const { t } = useTranslation()
     return (
         <>
             <div className='flex items-center gap-[10px]'>
                 <span className='w-[240px] bg-[#21212133] h-[3px]'></span>
-                <span>или</span>
+                <span>{t('or')}</span>
                 <span className='w-[240px] bg-[#21212133] h-[3px]'></span>
             </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
 import Header from './../components/Header';
 import Modal from './../components/Modal';
 import Home from './Home';
@@ -13,7 +14,7 @@ const Main = () => {
     const state = location.state || {};
 
     return (
-        <div>
+        <div className='bg-[#f7f7f7]'>
             <Header />
             <Routes location={state.backgroundLocation || location}>
                 <Route path="/" element={<Home />} />

@@ -3,7 +3,7 @@ import React from 'react'
 const Tours = () => {
     return (
         <div className='container mx-auto'>
-            Abuo
+            Tours page
         </div>
     )
 }

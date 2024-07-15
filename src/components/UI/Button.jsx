@@ -1,5 +1,5 @@
-const Button = ({ children, onClick, className }) => (
-  <button onClick={onClick} className={`  text-white rounded ${className}`}>
+const Button = ({ children, onClick, className, type }) => (
+  <button onClick={onClick} type={type} className={`  text-white rounded ${className}`}>
     {children}
   </button>
 );

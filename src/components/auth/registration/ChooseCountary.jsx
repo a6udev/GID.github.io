@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '../../UI/Button';
+import { useTranslation } from 'react-i18next';
 
 function ChooseCountary() {
     const navigate = useNavigate();
     const location = useLocation();
+    const { t } = useTranslation()
 
     const back = (e) => {
         e.stopPropagation();
@@ -22,16 +24,16 @@ function ChooseCountary() {
     }
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-100" onClick={back}>
-            <div onClick={(e) => e.stopPropagation()} className="w-[1600px] flex justify-between bg-white h-[800px] rounded-[128px] relative p-20">
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-[20]" onClick={back}>
+            <div onClick={(e) => e.stopPropagation()} className="w-[1600px] flex justify-between bg-white h-[800px] rouned-[128px] relative p-20">
 
                 <div className='w-full '>
                     <div className='flex flex-col items-center justify-center text-center gap-[40px]'>
                         <img src="http://localhost:5173/img/GID.png" alt="" />
 
                         <div>
-                            <h1 className='text-[40px] font-[700] '>Добро пожаловать</h1>
-                            <p className='text-[20px] text-[#212121c2]'>Выберите свой регион</p>
+                            <h1 className='text-[40px] font-[700] '>{t('welcome')}</h1>
+                            <p className='text-[20px] text-[#212121c2]'>{t('select')}</p>
                         </div>
 
                         <div className='flex justify-between gap-[40px]'>
