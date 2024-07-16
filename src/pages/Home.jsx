@@ -10,6 +10,8 @@ import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { useTranslation } from 'react-i18next';
 import Tours from '../components/tours';
+import Organization from '../components/organization/Organization';
+import Popular from '../components/popular/Popular';
 
 
 function Home() {
@@ -88,6 +90,8 @@ function Home() {
 
             <div className='w-full   mt-[100px] container mx-auto'>
                 <Tours />
+                <Organization />
+                <Popular />
             </div>
         </>
     );
